@@ -9,6 +9,8 @@ public class GameManagerInfo : MonoBehaviour
     List<GameObject> seedList = new List<GameObject>();
     //A list of all Instruments in the game. Used for referencing, instantiating, etc.
     List<GameObject> instrumentList = new List<GameObject>();
+    //A List of all Sonic Mails in the game. used for referencing, instantiating, etc.
+    List<GameObject> mailList = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
