@@ -368,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 836338420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: -0.664, z: -4.242533}
+  m_LocalPosition: {x: 0.001, y: -0.664, z: 10}
   m_LocalScale: {x: 0.17775932, y: 0.35071, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -473,11 +473,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11847564
+      value: -22.4
       objectReference: {fileID: 0}
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.028521879
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -514,6 +514,22 @@ PrefabInstance:
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
       value: ShootInstrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Size.y
+      value: 4.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 722316600767818537, guid: 03277d30bad8a3c4dabc156a328b9c86, type: 3}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Resource
@@ -633,6 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1234473708}
+  - component: {fileID: 1234473709}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -655,6 +672,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234473709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234473707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd5993ff685d8847b055011c9e77f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameCounter: 0
+  seedList: []
+  instrumentList: []
+  mailList: []
 --- !u!1001 &1469988503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,11 +698,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11847564
+      value: -27.12
       objectReference: {fileID: 0}
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.028521879
+      value: 4.97
       objectReference: {fileID: 0}
     - target: {fileID: 586547556842971454, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -706,6 +739,22 @@ PrefabInstance:
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
       value: DeathInstrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Size.x
+      value: 5.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Size.y
+      value: 11.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1343479790192147645, guid: 4e9baa046aaef2b4da7e669a11b78eba, type: 3}
+    - target: {fileID: 966184045080895937, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Resource
@@ -807,6 +856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Song
       objectReference: {fileID: 0}
+    - target: {fileID: 7872683446688739354, guid: 9485b510839c9f74fbb58e7a8070235a, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1234473707}
     - target: {fileID: 7872683446688739354, guid: 9485b510839c9f74fbb58e7a8070235a, type: 3}
       propertyPath: 'instrumentsInSong.Array.data[0]'
       value: 

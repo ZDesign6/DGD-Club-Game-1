@@ -10,7 +10,8 @@ public class SongBehavior : MonoBehaviour
      * Instruments, their order, and all their Instrument data
      * whenever we need */
     public GameObject[] instrumentsInSong = new GameObject[4];
-
+    //This is a reference to the GameManager to simplify referencing
+    public GameObject GameManager;
     /*This fct iterates over this Song's instrumentsInSong,
      * playing the audio file located in each of their 
      * Audio Source Components */
@@ -22,12 +23,14 @@ public class SongBehavior : MonoBehaviour
             //play the Audio Resource of this Instrument's Audio Source Component
             instrumentsInSong[songIndex].GetComponent<AudioSource>().Play();
             //should probably add a waiting period before the loop recurs so we don't stack sounds
+           
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Ensures that this Song has a reference to the Game Manager
+        GameManager = GameObject.Find("Game Manager");
     }
 
     // Update is called once per frame
