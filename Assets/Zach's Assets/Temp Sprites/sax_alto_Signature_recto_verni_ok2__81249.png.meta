@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sax_alto_Signature_recto_verni_ok2__81249_0: 1343479790192147645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
