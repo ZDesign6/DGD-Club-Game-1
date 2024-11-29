@@ -24,13 +24,14 @@ public class SonicMailBehavior : MonoBehaviour
         //The current Main Camera's conversion of mouse screenpoint to worldpoint
         Vector3 currentMouseWorldPoint = activeCam.ScreenToWorldPoint(new Vector3(currentmouseX, currentmouseY, 0));
         //Debug.Log("The current active cam converted that to " + currentMouseWorldPoint);
+        
         //If the Play Button's Collider is overlapping with the mouse's Vector2...
         if (playButton.GetComponent<PolygonCollider2D>().OverlapPoint(new Vector2(currentMouseWorldPoint.x, currentMouseWorldPoint.y)) == true)
         {
             Debug.Log("MOUSE IS ON PLAY BUTTON");
+            //Grab the specific instance of the Song in this Mail and use its PlayInstruments() method
+            song.GetComponent<SongBehavior>().playInstruments();
         }
-        //Grab the specific instance of the Song in this Mail and use its PlayInstruments() method
-        song.GetComponent<SongBehavior>().playInstruments();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
