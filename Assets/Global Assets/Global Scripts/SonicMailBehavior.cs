@@ -18,13 +18,13 @@ public class SonicMailBehavior : MonoBehaviour
     public void playSong(InputAction.CallbackContext actionInfo )
     {
         //An abstraction of the mouse's screenspace coords as passed by the callback context
-        float currentmouseX = actionInfo.ReadValue<Vector2>().x;
-        float currentmouseY = actionInfo.ReadValue<Vector2>().y;
+        float currentMouseX = actionInfo.ReadValue<Vector2>().x;
+        float currentMouseY = actionInfo.ReadValue<Vector2>().y;
         //Debug.Log("Callback context carried " + actionInfo.ReadValue<Vector2>() + " as mouse pos");
         //An abstraction of the current active Main Camera
         Camera activeCam = Camera.main;
         //The current Main Camera's conversion of mouse screenpoint to worldpoint
-        Vector3 currentMouseWorldPoint = activeCam.ScreenToWorldPoint(new Vector3(currentmouseX, currentmouseY, 0));
+        Vector3 currentMouseWorldPoint = activeCam.ScreenToWorldPoint(new Vector3(currentMouseX, currentMouseY, 0));
         //Debug.Log("The current active cam converted that to " + currentMouseWorldPoint);
         
         //If the Play Button's Collider is overlapping with the mouse's Vector2...
