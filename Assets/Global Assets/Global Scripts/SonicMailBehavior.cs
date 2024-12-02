@@ -15,6 +15,7 @@ public class SonicMailBehavior : MonoBehaviour
      Called by Player Input 'Interact'.*/
     public GameObject Text;
     //The text that will show up
+    public GameObject Seed;
     public void playSong(InputAction.CallbackContext actionInfo )
     {
         //An abstraction of the mouse's screenspace coords as passed by the callback context
@@ -34,6 +35,7 @@ public class SonicMailBehavior : MonoBehaviour
             //Grab the specific instance of the Song in this Mail and use its PlayInstruments() method
             song.GetComponent<SongBehavior>().playInstruments();
             Text.SetActive(true);
+            Seed.SetActive(true);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

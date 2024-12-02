@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &97762472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2842566293519607788, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+  m_PrefabInstance: {fileID: 1483686304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235425023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1223,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2842566293519607788, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695819218918205100, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4646986489337924507, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
@@ -1291,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootInstrument
       objectReference: {fileID: 0}
+    - target: {fileID: 7437383363712330577, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: Seed
+      value: 
+      objectReference: {fileID: 97762472}
     - target: {fileID: 7437383363712330577, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: Text
       value: 
