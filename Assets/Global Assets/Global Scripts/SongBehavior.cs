@@ -11,7 +11,7 @@ public class SongBehavior : MonoBehaviour
      * whenever we need */
     public GameObject[] instrumentsInSong = new GameObject[4];
     //This is a reference to the GameManager to simplify referencing
-    public GameObject GameManager;
+    GameObject GameManager;
     /*This fct iterates over this Song's instrumentsInSong,
      * playing the audio file located in each of their 
      * Audio Source Components */

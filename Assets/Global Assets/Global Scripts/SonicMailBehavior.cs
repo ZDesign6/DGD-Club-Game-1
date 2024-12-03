@@ -9,6 +9,9 @@ public class SonicMailBehavior : MonoBehaviour
     /*This is a reference to THIS Sonic Mail's Play Button,
      * used for checking collision during PlaySong()*/
     public GameObject playButton;
+    /*This is a reference to this SonicMail's Window.
+     * Used for turning rendering on/off through obj activation */
+    public GameObject windowSegment;
     //This is the List of Seeds that this Sonic Mail contains
     public List<GameObject> seedsInMail = new List<GameObject>();
     /*This fct calls the playSong() fct of this Mail's Song.

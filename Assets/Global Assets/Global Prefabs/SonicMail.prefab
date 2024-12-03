@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4364681046287249705
 Transform:
   m_ObjectHideFlags: 0
@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8842270797850615803}
   - {fileID: 7827804117735512715}
+  - {fileID: 4275334785708721291}
   m_Father: {fileID: 4646986489337924507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4673174650238230805
@@ -116,16 +117,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318696832232614845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.005462886}
-  m_LocalScale: {x: 0.009680207, y: 0.009680207, z: 0.009680207}
+  m_LocalPosition: {x: 0, y: 0, z: -1.0054629}
+  m_LocalScale: {x: 0.0013619298, y: 0.0021202187, z: 0.009680207}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797689224709500342}
-  m_Father: {fileID: 4646986489337924507}
+  m_Father: {fileID: 4364681046287249705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.4, y: 1.01}
+  m_AnchoredPosition: {x: 0.001406908, y: -0.06007886}
   m_SizeDelta: {x: 717, y: 403.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &805434261181042026
@@ -425,8 +426,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4646986489337924507}
-  - component: {fileID: 7437383363712330577}
   - component: {fileID: 2067717618693699352}
+  - component: {fileID: 1977708463893869873}
   m_Layer: 0
   m_Name: SonicMail
   m_TagString: Untagged
@@ -448,7 +449,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4364681046287249705}
-  - {fileID: 4275334785708721291}
   - {fileID: 4334838002012043071}
   - {fileID: 3698776164475498440}
   - {fileID: 8741126487861355573}
@@ -460,29 +460,6 @@ Transform:
   - {fileID: 4086639163557178839}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7437383363712330577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6844520176285507379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b508deea2e265f4d84b86e90201e28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  song: {fileID: 345706440180079296}
-  playButton: {fileID: 9175860481433781454}
-  seedsInMail:
-  - {fileID: 2842566293519607788}
-  - {fileID: 2886265965489225499}
-  - {fileID: 7067303350371185894}
-  - {fileID: 2434553899203721241}
-  - {fileID: 1286705972244831769}
-  - {fileID: 5964151302417398832}
-  - {fileID: 6050935155284339141}
-  - {fileID: 1421539574354437646}
 --- !u!114 &2067717618693699352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +491,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7437383363712330577}
+      - m_Target: {fileID: 1977708463893869873}
         m_TargetAssemblyTypeName: SonicMailBehavior, Assembly-CSharp
         m_MethodName: playSong
         m_Mode: 0
@@ -581,6 +558,32 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1977708463893869873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844520176285507379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b508deea2e265f4d84b86e90201e28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song: {fileID: 345706440180079296}
+  playButton: {fileID: 9175860481433781454}
+  windowSegment: {fileID: 532513929341077500}
+  seedsInMail:
+  - {fileID: 2842566293519607788}
+  - {fileID: 2886265965489225499}
+  - {fileID: 7067303350371185894}
+  - {fileID: 2434553899203721241}
+  - {fileID: 1286705972244831769}
+  - {fileID: 5964151302417398832}
+  - {fileID: 6050935155284339141}
+  - {fileID: 1421539574354437646}
+  Text: {fileID: 1789822870395503680}
+  Seed: {fileID: 0}
 --- !u!1 &9175860481433781454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,8 +1621,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
-      value: Instrument 3
+      value: Power Up Instrument
       objectReference: {fileID: 0}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: cdace719cf5b5d84c8f8e627cf210b00, type: 3}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cdace719cf5b5d84c8f8e627cf210b00, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1825,8 +1836,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
-      value: Instrument 2
+      value: Shoot Instrument
       objectReference: {fileID: 0}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a08077204819c4488a9c795269e2016, type: 3}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a08077204819c4488a9c795269e2016, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1954,8 +1973,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
-      value: Instrument 4
+      value: RockDestroy Instrument
       objectReference: {fileID: 0}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a5d98260daa44c4d91a935ab4d72ab3, type: 3}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a5d98260daa44c4d91a935ab4d72ab3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2153,8 +2180,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921656790709906675, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
       propertyPath: m_Name
-      value: Instrument 1
+      value: Death Instrument
       objectReference: {fileID: 0}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 88239fe524a1eea44a5c207ee3b3253f, type: 3}
+    - target: {fileID: 1042865479175316992, guid: 7b8bb66119c88e14a958df4180e0f4b6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 88239fe524a1eea44a5c207ee3b3253f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
