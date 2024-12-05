@@ -12,19 +12,40 @@ public class SongBehavior : MonoBehaviour
     public GameObject[] instrumentsInSong = new GameObject[4];
     //This is a reference to the GameManager to simplify referencing
     GameObject GameManager;
+    //This is a bool flag that keeps track of if the Song in the Mail is playing.
+    bool isPlaying = false;
     /*This fct iterates over this Song's instrumentsInSong,
      * playing the audio file located in each of their 
      * Audio Source Components */
     public void playInstruments()
     {
-        //iterate over Instruments in instrumentsInSong...
-        for (int songIndex = 0; songIndex < instrumentsInSong.Length; songIndex = songIndex + 1)
+        //If the SOng is not currently playing, play it
+        if (isPlaying == false)
         {
-            //play the Audio Resource of this Instrument's Audio Source Component
-            instrumentsInSong[songIndex].GetComponent<AudioSource>().Play();
-            //should probably add a waiting period before the loop recurs so we don't stack sounds
-           
+            //set isPlaying to true
+            isPlaying = true;
+            //iterate over Instruments in instrumentsInSong...
+            for (int songIndex = 0; songIndex < instrumentsInSong.Length; songIndex = songIndex + 1)
+            {
+                //setting the volume in the Audio Component to 1 so we hear them
+                instrumentsInSong[songIndex].GetComponent<AudioSource>().volume = 1.0f;
+
+            }
         }
+        //else song must be playing, so stop it
+        else
+        {
+            //set isPlaying to false
+            isPlaying = false;
+            //iterate over Instruments in instrumentsInSong...
+            for (int songIndex = 0; songIndex < instrumentsInSong.Length; songIndex = songIndex + 1)
+            {
+                //setting the volume in the AUdio COmponent to 0 so they mute
+                instrumentsInSong[songIndex].GetComponent<AudioSource>().volume = 0;
+           
+            }
+        }
+        
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
