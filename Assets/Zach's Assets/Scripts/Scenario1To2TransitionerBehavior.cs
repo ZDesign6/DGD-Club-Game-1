@@ -7,10 +7,12 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
     GameObject gameManager;
     //A reference to the Mail Cubby so we can move the active Sonic Mail to it.
     GameObject mailCubby;
+    //a reference to the SeedSelector Cubby so we can tell it to intake the new Seeds
+    GameObject seedSelectorCubby;
     //A container to hold the Camera that this Transitioner will switch to when activated
     public Camera targetCamera;
-    /*This fct activates on Player Interact. Changes active Camera so we can
-     * switch 'Scenarios' */
+    /*This fct activates on Player Interact. Changes active Camera
+     * and passes the activeMail into the Mail Cubby in Scneario 2.*/
     public void changeScenario(InputAction.CallbackContext actionInfo)
     {
         //An abstraction of the mouse's screenspace coords as passed by the callback context
@@ -24,9 +26,10 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
         //If mouse is colliding with this Transitioner at the time of click...
         if (this.GetComponent<PolygonCollider2D>().OverlapPoint(new Vector2(currentMouseWorldPoint.x, currentMouseWorldPoint.y)))
         {
-            //set the activeMail container in the Mail Cubby equal to the activeMail in the Game Manager
-            mailCubby.GetComponent<MailCubbyBehavior>().activeMail = gameManager.GetComponent<GameManagerInfo>().activeMail;
-            Debug.Log("MOUSE IS IN THE TRANSITIONER");
+            //pass the activeMail from Game Manager to Mail Cubby
+            passMailToCubby();
+            //Let the Seed Selector know to intake the Seeds from the new Mail
+            seedSelectorCubby.GetComponent<SeedSelectorCubbyBehavior>().intakeSeeds();
             //Disable Camera component of the active Cam
             activeCam.GetComponent<Camera>().enabled = false;
             //And disable the Audio Listener component of the active Cam
@@ -44,11 +47,20 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
         gameManager = GameObject.Find("Game Manager");
         //Assign reference to the Mail Cubby
         mailCubby = GameObject.Find("Mail Cubby");
+        //Assign reference to the Seed Selector
+        seedSelectorCubby = GameObject.Find("Seed Selector Cubby");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    //Handles passing the activeMail in Scenario 1 to the Mail Cubby in Scenario 2
+    void passMailToCubby()
+    {
+        //set the mailInCubby container in the Mail Cubby equal to the activeMail in the Game Manager
+        mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby = gameManager.GetComponent<GameManagerInfo>().activeMail;
+        Debug.Log("PASSED " + gameManager.GetComponent<GameManagerInfo>().activeMail + " TO MAIL CUBBY");
     }
 }

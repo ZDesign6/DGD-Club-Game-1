@@ -5,7 +5,7 @@ public class MailCubbyBehavior : MonoBehaviour
     /*A container for the current active SonicMail from Scenario 1.
      * Do not ever fill this manually, it should be set by the 
      * Scene1To2TransitionerBehavior Script*/
-    public GameObject activeMail;
+    public GameObject mailInCubby;
     //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
