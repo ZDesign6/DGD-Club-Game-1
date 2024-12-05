@@ -14,6 +14,8 @@ public class GameManagerInfo : MonoBehaviour
     /*A reference to the current active SonicMail. 
      * Used to know which Mail to bring into Scenario 2 */
     public GameObject activeMail;
+    //Keeps track of which seed the Player is grabbing
+    public GameObject grabbedSeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

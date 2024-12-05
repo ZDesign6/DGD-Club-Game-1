@@ -19,7 +19,7 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
         float currentMouseX = actionInfo.ReadValue<Vector2>().x;
         float currentMouseY = actionInfo.ReadValue<Vector2>().y;
         //Debug.Log("Callback context carried " + actionInfo.ReadValue<Vector2>() + " as mouse pos");
-        //An abstraction of the current active Main Camera
+        //Grab the current main Camera
         Camera activeCam = Camera.main;
         //The current Main Camera's conversion of mouse screenpoint to worldpoint
         Vector3 currentMouseWorldPoint = activeCam.ScreenToWorldPoint(new Vector3(currentMouseX, currentMouseY, 0));

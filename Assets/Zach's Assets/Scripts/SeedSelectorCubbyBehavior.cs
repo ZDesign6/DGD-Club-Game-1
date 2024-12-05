@@ -31,8 +31,12 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
         {
             //turning on their SpriteRenderers
             seedsInSelector[currentIndex].GetComponent<SpriteRenderer>().enabled = true;
+            //turning on their Colliders
+            seedsInSelector[currentIndex].GetComponent<PolygonCollider2D>().enabled = true;
             //And moving them to currentX, currentY
             seedsInSelector[currentIndex].GetComponent<Transform>().position = new Vector3(currentX, currentY, -5);
+            //And storing that location in the Seed as its home pos
+            seedsInSelector[currentIndex].GetComponent<SeedController>().homePos = new Vector3(currentX, currentY, -5);
             //Then increasing currentX before next loop
             currentX = currentX + distanceBetweenSeeds;
             //And if we are on the 4th Seed, decrease currentY and reset currentX before next loop
@@ -41,7 +45,7 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
                 currentX = this.GetComponent<Transform>().position.x - seedSpawnXOffset;
                 currentY = currentY - distanceBetweenRows;
             }
-            Debug.Log("SEED SELECTOR TOOK IN " + seedsInSelector[currentIndex]);
+            //Debug.Log("SEED SELECTOR TOOK IN " + seedsInSelector[currentIndex]);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
