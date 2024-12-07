@@ -78,8 +78,6 @@ public class PlanterBehavior : MonoBehaviour
                     instrumentLocal.GetComponent<SpriteRenderer>().enabled = true;
                     //And set its volume to 1
                     instrumentLocal.GetComponent<AudioSource>().volume = 1.0f;
-                    //destroys the seed in the pot
-                    Destroy(seedInPot);
                 }
           }
     }
