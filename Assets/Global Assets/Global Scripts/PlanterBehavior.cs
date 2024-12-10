@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -48,14 +47,6 @@ public class PlanterBehavior : MonoBehaviour
     }
     void Update()
     {
-      
-          /*
-          if (seedInPot==null)
-          {
-          //never run this void event again lol
-          return
-          }
-          */
           //if there is a Seed in this Planter
           if (seedInPot != null)
           {

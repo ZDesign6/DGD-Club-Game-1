@@ -12,39 +12,51 @@ public class SeedController : MonoBehaviour
    public float currentgrowth;
     //A reference to the Game Manager used to communicate when Seeds are grabbed.
     GameObject gameManager;
-    //A container for this Seed's "home coords", set when the Seed enters the Seed Selector
-    public Vector3 homePos;
+    //This boolean determines if a Click actuates anything
+    bool isClickable = false;
    /*This fct activates on Player Clicking */
    public void onClick(InputAction.CallbackContext actionInfo)
     {
-        //COLLISION CHECK
-
-        //First we grab the active Camera so it can convert Screen to World for us
-        Camera activeCam = Camera.main;
-        //Then we store the Mouse's Screenspace X/Y as passed by CallbackContext
-        float mouseScreenX = actionInfo.ReadValue<Vector2>().x;
-        float mouseScreenY = actionInfo.ReadValue<Vector2>().y;
-        //Next we convert the Screen coords to World coords and store them
-        Vector3 mouseWorldPos = activeCam.ScreenToWorldPoint(new Vector3(mouseScreenX, mouseScreenY, 0));
-        //Now we check if this Seed's Collider is colliding with Mouse in Worlspace
-        if (this.GetComponent<PolygonCollider2D>().OverlapPoint(mouseWorldPos) == true)
+        //If the Seed is not on click cooldown...
+        if (isClickable == true)
         {
-            Debug.Log("CLICKED A SEED");
-            //If this Seed is not currently grabbed, make it grabbed
-            if (gameManager.GetComponent<GameManagerInfo>().grabbedSeed != this.gameObject)
+            //COLLISION CHECK
+
+            //First we grab the active Camera so it can convert Screen to World for us
+            Camera activeCam = Camera.main;
+            //Then we store the Mouse's Screenspace X/Y as passed by CallbackContext
+            float mouseScreenX = actionInfo.ReadValue<Vector2>().x;
+            float mouseScreenY = actionInfo.ReadValue<Vector2>().y;
+            //Next we convert the Screen coords to World coords and store them
+            Vector3 mouseWorldPos = activeCam.ScreenToWorldPoint(new Vector3(mouseScreenX, mouseScreenY, 0));
+            //Now we check if this Seed's Collider is colliding with Mouse in Worlspace
+            if (this.GetComponent<PolygonCollider2D>().OverlapPoint(mouseWorldPos) == true)
             {
-                //Make this Seed the grabbed Seed
-                gameManager.GetComponent<GameManagerInfo>().grabbedSeed = this.gameObject;
+                //turn on click cooldown
+                isClickable = false;
+                //and store the current frame in the GameManager
+                gameManager.GetComponent<GameManagerInfo>().clickFrame = gameManager.GetComponent<GameManagerInfo>().frameCounter;
+                Debug.Log("CLICKED A SEED");
+                //If this Seed is not currently grabbed, make it grabbed
+                if (gameManager.GetComponent<GameManagerInfo>().grabbedSeed != this.gameObject)
+                {
+                    //Make this Seed the grabbed Seed
+                    gameManager.GetComponent<GameManagerInfo>().grabbedSeed = Instantiate(this.gameObject);
+                }
+                //else if it is already the grabbed Seed...
+                else
+                {
+                    //exile the grabbed Seed to the shadow realm
+                    gameManager.GetComponent<GameManagerInfo>().grabbedSeed.GetComponent<Transform>().position = new Vector3(1000, 1000, 1000);
+                    //Mark this Seed as no longer grabbed
+                    gameManager.GetComponent<GameManagerInfo>().grabbedSeed = null;
+                }
+
             }
-            //else if it is already the grabbed Seed...
-            else
-            {
-                //Mark this Seed as no longer grabbed
-                gameManager.GetComponent<GameManagerInfo>().grabbedSeed = null;
-                //And return this Seed to its homePos
-                this.gameObject.GetComponent<Rigidbody2D>().position = homePos;
-            }
-            
+        }
+        else
+        {
+            Debug.Log(this.gameObject.name + " is on click cooldown");
         }
     }
     public void Start()
@@ -60,7 +72,12 @@ public class SeedController : MonoBehaviour
             Camera activeCam = Camera.main;
             //Then set this Seed's pos equal to mouse's world pos
             this.gameObject.GetComponent<Rigidbody2D>().position = activeCam.ScreenToWorldPoint(Input.mousePosition);
-
+        }
+        //Every frame, check if 10 frames have elapsed since the last click
+        if ( gameManager.GetComponent<GameManagerInfo>().frameCounter == gameManager.GetComponent<GameManagerInfo>().clickFrame + 10)
+        {
+            //If they have, set isClickable to true
+            isClickable = true;
         }
     }
 }

@@ -105,8 +105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instrumentinseed: {fileID: 4222152837994558477}
-  growthtime: 0
+  growthtime: 600
   currentgrowth: 0
+  homePos: {x: 0, y: 0, z: 0}
 --- !u!50 &-2665740875975916974
 Rigidbody2D:
   serializedVersion: 5

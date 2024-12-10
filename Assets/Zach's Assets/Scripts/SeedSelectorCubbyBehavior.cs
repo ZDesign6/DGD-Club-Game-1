@@ -35,8 +35,6 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
             seedsInSelector[currentIndex].GetComponent<PolygonCollider2D>().enabled = true;
             //And moving them to currentX, currentY
             seedsInSelector[currentIndex].GetComponent<Transform>().position = new Vector3(currentX, currentY, -5);
-            //And storing that location in the Seed as its home pos
-            seedsInSelector[currentIndex].GetComponent<SeedController>().homePos = new Vector3(currentX, currentY, -5);
             //Then increasing currentX before next loop
             currentX = currentX + distanceBetweenSeeds;
             //And if we are on the 4th Seed, decrease currentY and reset currentX before next loop

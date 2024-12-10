@@ -233,7 +233,7 @@
                 {
                     "name": "modifier",
                     "id": "ec551beb-564d-4bdc-a7ee-f460849e3a31",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
