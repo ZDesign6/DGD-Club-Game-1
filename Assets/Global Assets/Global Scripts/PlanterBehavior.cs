@@ -11,6 +11,8 @@ public class PlanterBehavior : MonoBehaviour
     public GameObject TimerText;
     //Reference to Game Manager for checking grabbed Seeds
     GameObject gameManager;
+    //This is a container that should only be filled when the Seed in the Pot has matured into an Instrument
+    public GameObject instrumentInPot;
     /*This fct is called when Player clicks. */
     public void OnClick(InputAction.CallbackContext actionInfo)
     {
@@ -29,14 +31,33 @@ public class PlanterBehavior : MonoBehaviour
             //As long as there is a Seed being currently grabbed
             if (gameManager.GetComponent<GameManagerInfo>().grabbedSeed != null)
             {
-                //Assign that Seed to seedInPot
+                //Check if there is already an instrument in the Pot...
+                if (instrumentInPot != null) 
+                {
+                    //Turn off the Sprite Renderer for the Instrument that might be in the Pot
+                    instrumentInPot.GetComponent<SpriteRenderer>().enabled = false;
+                    //Set the Instrument in the Pot's volume to 0
+                    instrumentInPot.GetComponent<AudioSource>().volume = 0f;
+                    //Finally, clear out any instrument that might have been in the Pot
+                    instrumentInPot = null;
+                }
+                //Assign the grabbed Seed to seedInPot
                 seedInPot = gameManager.GetComponent<GameManagerInfo>().grabbedSeed;
                 Debug.Log("PUT " + seedInPot + " IN THE PLANTER");
             }
+            //Else if there is no grabbed Seed
             else
             {
-                Debug.Log("PLANTER DID NOT SEE A SEED BEING GRABBED");
+                //Turn off the Sprite Renderer for the Instrument in the Pot
+                instrumentInPot.GetComponent<SpriteRenderer>().enabled = false;
+                //Set the Instrument in the Pot's volume to 0
+                instrumentInPot.GetComponent<AudioSource>().volume = 0f;
+                //clear out the instrument from the Pot
+                instrumentInPot = null;
+                //And the Seed from the Pot
+                seedInPot = null;
             }
+
         }
     }
     // Update is called once per frame
@@ -61,14 +82,14 @@ public class PlanterBehavior : MonoBehaviour
                 {
                     //Store this Planter's current pos
                     Vector3 planterPosition = this.gameObject.GetComponent<Transform>().position;
-                    //grabs the information of the instrumentin the seed in the seed controller
-                    GameObject instrumentLocal=seedInPot.GetComponent<SeedController>().instrumentinseed;
-                    //move that Instrument to the Planter's pos
-                    instrumentLocal.GetComponent<Transform>().position = planterPosition;
+                    //grabs the Instrument from the Seed and store it in the Pot
+                    instrumentInPot=seedInPot.GetComponent<SeedController>().instrumentinseed;
+                    //move the Instrument to an offest relative to the planter's Position
+                    instrumentInPot.GetComponent<Transform>().position = new Vector3(planterPosition.x, planterPosition.y + 3.4f, planterPosition.z + 1);
                     //Then turn its Sprite Renderer on
-                    instrumentLocal.GetComponent<SpriteRenderer>().enabled = true;
+                    instrumentInPot.GetComponent<SpriteRenderer>().enabled = true;
                     //And set its volume to 1
-                    instrumentLocal.GetComponent<AudioSource>().volume = 1.0f;
+                    instrumentInPot.GetComponent<AudioSource>().volume = 1.0f;
                 }
           }
     }

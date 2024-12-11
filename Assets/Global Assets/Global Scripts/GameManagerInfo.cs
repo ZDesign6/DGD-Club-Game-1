@@ -35,7 +35,7 @@ public class GameManagerInfo : MonoBehaviour
             //activate the Mail at Index 0
             activateMail(0);
         }
-        Debug.Log("grabbed Seed is currently" + grabbedSeed);
+        //Debug.Log("grabbed Seed is currently" + grabbedSeed);
 
     }
     /*This fct grabs the indicated SonicMail out of the mailList and 
