@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 7a1867f6e5f6ced4b87387e6d01c93ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5953235909463732391
+    second: fan3_0
+  - first:
+      213: -550742897287635458
+    second: fan3_1
+  - first:
+      213: -5388324015303601977
+    second: fan3_2
+  - first:
+      213: -4988327744074751951
+    second: fan3_3
+  - first:
+      213: 140164033254840693
+    second: fan3_4
+  - first:
+      213: -7211149760596349414
+    second: fan3_5
+  - first:
+      213: -2612681202949011706
+    second: fan3_6
+  - first:
+      213: 2855523483900589100
+    second: fan3_7
+  - first:
+      213: -8396597050885459776
+    second: fan3_8
+  - first:
+      213: 66676964190250615
+    second: fan3_9
+  - first:
+      213: -7847585934785488480
+    second: fan3_10
+  - first:
+      213: -4765512906859996457
+    second: fan3_11
+  - first:
+      213: 4090777836374282340
+    second: fan3_12
+  - first:
+      213: 6356337381876235911
+    second: fan3_13
+  - first:
+      213: -3535603174044462491
+    second: fan3_14
+  - first:
+      213: -8142761715154859917
+    second: fan3_15
+  - first:
+      213: 5720078778705534249
+    second: fan3_16
+  - first:
+      213: 1650316460837395606
+    second: fan3_17
+  - first:
+      213: -7228577512711333291
+    second: fan3_18
+  - first:
+      213: 3663639450770024562
+    second: fan3_19
+  - first:
+      213: -4279317343955926510
+    second: fan3_20
+  - first:
+      213: 9003295956847486831
+    second: fan3_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fan3_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 838
+        width: 298
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a07faf94842e9250800000000000000
+      internalID: 5953235909463732391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 868
+        width: 263
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdd99cb04e5b58f0800000000000000
+      internalID: -550742897287635458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 879
+        width: 194
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c05f1d4bd3d835b0800000000000000
+      internalID: -5388324015303601977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_3
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 877
+        width: 103
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130e2379856e5cab0800000000000000
+      internalID: -4988327744074751951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_4
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 877
+        width: 24
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579d0741276f1f100800000000000000
+      internalID: 140164033254840693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_5
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 871
+        width: 58
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ee281cf79dceb90800000000000000
+      internalID: -7211149760596349414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_6
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 854
+        width: 88
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60742ead944edbbd0800000000000000
+      internalID: -2612681202949011706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_7
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 841
+        width: 132
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c243ea9ba7bd0a720800000000000000
+      internalID: 2855523483900589100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_8
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 815
+        width: 164
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c031e3287b497b80800000000000000
+      internalID: -8396597050885459776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 787
+        width: 321
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776e24d7852ece000800000000000000
+      internalID: 66676964190250615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_10
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 771
+        width: 172
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a952ccab26c71390800000000000000
+      internalID: -7847585934785488480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_11
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 665
+        width: 288
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da121e824f7dddb0800000000000000
+      internalID: -4765512906859996457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_12
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 632
+        width: 169
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4605120b4cc55c830800000000000000
+      internalID: 4090777836374282340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_13
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 712
+        width: 173
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ef447eb2f363850800000000000000
+      internalID: 6356337381876235911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_14
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 559
+        width: 272
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562165845a30feec0800000000000000
+      internalID: -3535603174044462491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_15
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 476
+        width: 228
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3784b8dbc591ffe80800000000000000
+      internalID: -8142761715154859917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_16
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 406
+        width: 143
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d5efbc75dc16f40800000000000000
+      internalID: 5720078778705534249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_17
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 379
+        width: 83
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c513fc31a17e610800000000000000
+      internalID: 1650316460837395606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_18
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 392
+        width: 40
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ad6730d0feeab90800000000000000
+      internalID: -7228577512711333291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_19
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 419
+        width: 77
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27821407bacd7d230800000000000000
+      internalID: 3663639450770024562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_20
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 488
+        width: 131
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212c6586c8fcc94c0800000000000000
+      internalID: -4279317343955926510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan3_21
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 556
+        width: 156
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67ea93a8f122fc70800000000000000
+      internalID: 9003295956847486831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fan3_0: 5953235909463732391
+      fan3_1: -550742897287635458
+      fan3_10: -7847585934785488480
+      fan3_11: -4765512906859996457
+      fan3_12: 4090777836374282340
+      fan3_13: 6356337381876235911
+      fan3_14: -3535603174044462491
+      fan3_15: -8142761715154859917
+      fan3_16: 5720078778705534249
+      fan3_17: 1650316460837395606
+      fan3_18: -7228577512711333291
+      fan3_19: 3663639450770024562
+      fan3_2: -5388324015303601977
+      fan3_20: -4279317343955926510
+      fan3_21: 9003295956847486831
+      fan3_3: -4988327744074751951
+      fan3_4: 140164033254840693
+      fan3_5: -7211149760596349414
+      fan3_6: -2612681202949011706
+      fan3_7: 2855523483900589100
+      fan3_8: -8396597050885459776
+      fan3_9: 66676964190250615
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
