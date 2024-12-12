@@ -11,6 +11,8 @@ public class GameManagerInfo : MonoBehaviour
     public List<GameObject> instrumentList = new List<GameObject>();
     //A List of all Sonic Mails in the game. used for referencing, instantiating, etc.
     public List<GameObject> mailList = new List<GameObject>();
+    //A List of all Planters. Used by Scenario2To1Transitioner to check Planter contents.
+    public List<GameObject> planterList = new List<GameObject>();
     /*A reference to the current active SonicMail. 
      * Used to know which Mail to bring into Scenario 2 */
     public GameObject activeMail;

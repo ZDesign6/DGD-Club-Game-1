@@ -54,6 +54,7 @@ public class SeedController : MonoBehaviour
 
             }
         }
+        //else we must be in cooldown
         else
         {
             Debug.Log(this.gameObject.name + " is on click cooldown");
@@ -61,6 +62,7 @@ public class SeedController : MonoBehaviour
     }
     public void Start()
     {
+        //Assign reference to Game Manager
         gameManager = GameObject.Find("Game Manager");
     }
     public void Update()

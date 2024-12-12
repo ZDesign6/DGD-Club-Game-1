@@ -60,11 +60,13 @@ public class PlanterBehavior : MonoBehaviour
 
         }
     }
-    // Update is called once per frame
+    //Start is called once on instantiation
     void Start()
     {
         //Assign reference to Game Manager
         gameManager = GameObject.Find("Game Manager");
+        //Add self to the Game Manager's list of Planters
+        gameManager.GetComponent<GameManagerInfo>().planterList.Add(this.gameObject);
     }
     void Update()
     {
