@@ -103,12 +103,12 @@ TextureImporter:
       name: book_0
       rect:
         serializedVersion: 2
-        x: 213
-        y: 45
-        width: 1484
-        height: 845
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ec8cc461afc21bd4eb82d7ff9e05b272
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      book_0: 3843231544584785974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

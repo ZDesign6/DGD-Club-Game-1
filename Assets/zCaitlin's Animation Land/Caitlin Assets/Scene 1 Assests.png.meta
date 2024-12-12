@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: ad69e3a2e77983b478e55eb701b750c0
+guid: 3206d4c97ea6a7c42b30ebef13db4752
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5210605757840286950
-    second: Book3_0
+      213: -821550932348568102
+    second: Scene 1 Assests_0
+  - first:
+      213: -8925878728701183611
+    second: Scene 1 Assests_1
+  - first:
+      213: -1343225120843376500
+    second: Scene 1 Assests_2
+  - first:
+      213: -3261957069691084472
+    second: Scene 1 Assests_3
+  - first:
+      213: 6104963716586126824
+    second: Scene 1 Assests_4
+  - first:
+      213: -4152628288938091429
+    second: Scene 1 Assests_5
+  - first:
+      213: -5981688811504112369
+    second: Scene 1 Assests_6
+  - first:
+      213: -577388061614384809
+    second: Scene 1 Assests_7
+  - first:
+      213: 1263283081210610171
+    second: Scene 1 Assests_8
+  - first:
+      213: -1168312075959447980
+    second: Scene 1 Assests_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Book3_0
+      name: Scene 1 Assests_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 534
+        y: 285
+        width: 247
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +142,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1b13539ba530b7b0800000000000000
-      internalID: -5210605757840286950
+      spriteID: c88dfba8ed7eb5de0800000000000000
+      internalID: -1343225120843376500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene 1 Assests_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 154
+        width: 202
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d6e51e7b5ccfca0800000000000000
+      internalID: -5981688811504112369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene 1 Assests_9
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 111
+        width: 38
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e43ad5b5259cfe0800000000000000
+      internalID: -1168312075959447980
       vertices: []
       indices: 
       edges: []
@@ -125,7 +196,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95c478d428991c94e9cfb814a29d35de
+    spriteID: 72126dc62822d4944ae65235e71cdae5
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +206,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Book3_0: -5210605757840286950
+      Scene 1 Assests_2: -1343225120843376500
+      Scene 1 Assests_6: -5981688811504112369
+      Scene 1 Assests_9: -1168312075959447980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
