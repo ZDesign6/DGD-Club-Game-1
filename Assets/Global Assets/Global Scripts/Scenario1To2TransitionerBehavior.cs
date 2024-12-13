@@ -59,8 +59,10 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
     //Handles passing the activeMail in Scenario 1 to the Mail Cubby in Scenario 2
     void passMailToCubby()
     {
-        //set the mailInCubby container in the Mail Cubby equal to the activeMail in the Game Manager
+        //set the mailInCubby container in the Mail Cubby equal to a copy of the activeMail in the Game Manager
         mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby = gameManager.GetComponent<GameManagerInfo>().activeMail;
+        //Then disable its Window
+        //mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.SetActive(false);
         Debug.Log("PASSED " + gameManager.GetComponent<GameManagerInfo>().activeMail + " TO MAIL CUBBY");
     }
 }

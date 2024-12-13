@@ -31,12 +31,20 @@ public class GameManagerInfo : MonoBehaviour
     {
         //every frame, update the frameCounter so it maintains accuracy.
         frameCounter = frameCounter + 1;
-        //A sample condition for making a Sonic Mail active, activates every second
-        if (frameCounter % 60 == 0)
+        
+        //ACTIVATING MAILS
+        
+        //If there is no activeMail...
+        if (activeMail == null)
         {
-            //activate the Mail at Index 0
-            activateMail(0);
+            //A sample condition for making a Sonic Mail active, activates every second
+            if (frameCounter % 60 == 0)
+            {
+                //activate the Mail at Index 0
+                activateMail(0);
+            }
         }
+        
         //Debug.Log("grabbed Seed is currently" + grabbedSeed);
 
     }

@@ -20,8 +20,23 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
      * stored in the Mail Cubby. Also sets their pos's. */
     public void intakeSeeds()
     {
-        //Assign the seeds from the Mail Cubby's mailInCubby to seedsInCubby
-        seedsInSelector = mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().seedsInMail;
+        //Loop over the seeds in the Mail from the MailCubby...
+        for (int currentIndex = 0; currentIndex < mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().seedsInMail.Count; currentIndex = currentIndex + 1)
+        {
+            //And assign the index at seedsInSelector equal to a copy of that Seed
+            seedsInSelector.Add(mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().seedsInMail[currentIndex]);
+        }
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        //Assign the Mail Cubby object into the local reference
+        mailCubby = GameObject.Find("Mail Cubby");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         //Representation of the X where Seeds will appear
         float currentX = this.GetComponent<Transform>().position.x - seedSpawnXOffset;
         //Representation of the Y where Seeds will appear
@@ -45,17 +60,5 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
             }
             //Debug.Log("SEED SELECTOR TOOK IN " + seedsInSelector[currentIndex]);
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //Assign the Mail Cubby object into the local reference
-        mailCubby = GameObject.Find("Mail Cubby");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

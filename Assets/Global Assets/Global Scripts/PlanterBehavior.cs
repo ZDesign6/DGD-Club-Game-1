@@ -87,7 +87,7 @@ public class PlanterBehavior : MonoBehaviour
                     //grabs the Instrument from the Seed and store it in the Pot
                     instrumentInPot=seedInPot.GetComponent<SeedController>().instrumentinseed;
                     //move the Instrument to an offest relative to the planter's Position
-                    instrumentInPot.GetComponent<Transform>().position = new Vector3(planterPosition.x, planterPosition.y + 3.4f, planterPosition.z + 1);
+                    instrumentInPot.GetComponent<Transform>().position = new Vector3(planterPosition.x, planterPosition.y + 1.5f, planterPosition.z - 1);
                     //Then turn its Sprite Renderer on
                     instrumentInPot.GetComponent<SpriteRenderer>().enabled = true;
                     //And set its volume to 1

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 257e28e9e60252049b4be60d74a74c39
+guid: 6d8ccec68b63a234e911b88961c490ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1366865428872719326
-    second: PlantBuzzard_0
+      213: -6320574058531052741
+    second: potFront_0
+  - first:
+      213: -4418821661583973094
+    second: potFront_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlantBuzzard_0
+      name: potFront_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 39
-        width: 309
-        height: 533
+        x: 82
+        y: 90
+        width: 339
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edb68b79dd418f210800000000000000
-      internalID: 1366865428872719326
+      spriteID: b3325b0b16fc848a0800000000000000
+      internalID: -6320574058531052741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potFront_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 379
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a156c775c113da2c0800000000000000
+      internalID: -4418821661583973094
       vertices: []
       indices: 
       edges: []
