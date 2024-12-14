@@ -18,7 +18,7 @@ public class GameManagerInfo : MonoBehaviour
     public GameObject activeMail;
     //Keeps track of which seed the Player is grabbing
     public GameObject grabbedSeed;
-    //Keeps track of the last frame that a Seed was clicked on
+    //Keeps track of the last frame that a Seed was clicked on. Used for preventing click spam.
     public int clickFrame = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

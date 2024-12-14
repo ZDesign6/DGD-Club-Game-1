@@ -59,10 +59,14 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
     //Handles passing the activeMail in Scenario 1 to the Mail Cubby in Scenario 2
     void passMailToCubby()
     {
-        //set the mailInCubby container in the Mail Cubby equal to a copy of the activeMail in the Game Manager
+        //Store the Window's current Worldspace Pos in the activeMail so it can be reset later by Scenario2To1Transitioner
+        gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowHomePos = new Vector3(gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().position.x, gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().position.y, gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().position.z);
+        //Store the Window's current Scale in the activeMail so it can be reset later by Sceario2To1 Transitioner
+        gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowHomeScale = new Vector3(gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().localScale.x, gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().localScale.y, gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().localScale.z);
+        //set the mailInCubby container in the Mail Cubby equal to the activeMail in the Game Manager
         mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby = gameManager.GetComponent<GameManagerInfo>().activeMail;
         //Then disable its Window
-        //mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.SetActive(false);
+        mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.SetActive(false);
         Debug.Log("PASSED " + gameManager.GetComponent<GameManagerInfo>().activeMail + " TO MAIL CUBBY");
     }
 }

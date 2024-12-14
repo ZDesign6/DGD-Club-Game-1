@@ -22,7 +22,6 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
         //If mouse is colliding with this Transitioner at the time of click...
         if (this.GetComponent<PolygonCollider2D>().OverlapPoint(new Vector2(currentMouseWorldPoint.x, currentMouseWorldPoint.y)))
         {
-            Debug.Log("MOUSE IS IN THE TRANSITIONER");
             //Disable Camera component of the active Cam
             activeCam.GetComponent<Camera>().enabled = false;
             //And disable the Audio Listener component of the active Cam
@@ -31,6 +30,26 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
             targetCamera.GetComponent<Camera>().enabled = true;
             //And enable the Audio Listener component of the targetCam
             targetCamera.GetComponent<AudioListener>().enabled = true;
+
+            //EMPTY PLANTERS
+
+            //iterate over all the planters in the planterList
+            for (int currentIndex = 0; currentIndex < gameManager.GetComponent<GameManagerInfo>().planterList.Count; currentIndex =currentIndex + 1)
+            {
+                //temp var for referencing the current Planter being operated on
+                GameObject currentPlanter = gameManager.GetComponent<GameManagerInfo>().planterList[currentIndex];
+                //empty the currentPlanter
+                currentPlanter.GetComponent<PlanterBehavior>().emptyPlanter();
+            }
+
+            //TURN ON THE VICTORY WINDOW OF THE ACTIVE MAIL
+
+            //set the Victory Window to active
+            gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().victoryWindowSegment.SetActive(true);
+            //set its worldspace position equal to the home pos that was stored by Scenario1To2 Transitioner
+            gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().victoryWindowSegment.GetComponent<Transform>().position = gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowHomePos;
+            //set its scale equal to the home scale that was stored by Scenario1To2 Transitioner
+            gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().victoryWindowSegment.GetComponent<Transform>().localScale = gameManager.GetComponent<GameManagerInfo>().activeMail.GetComponent<SonicMailBehavior>().windowHomeScale;
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,14 +81,18 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
                 {
                     //A temp var for storing the instrument in this Planter
                     GameObject planterInstrument = gameManager.GetComponent<GameManagerInfo>().planterList[currentIndex2].GetComponent<PlanterBehavior>().instrumentInPot;
-                    //Check if the Instrument in this Pot matches the current songInstrument
-                    if (planterInstrument == songInstrument)
+                    //As long as we haven't already counted a planter instrument towards this songInstrument
+                    if(counted == false)
                     {
-                        /*then flip the flag to let us know we have counted this songInstrument.
-                         * This prevents duplicate Instruments from counting more than once*/
-                        counted = true;
-                        //And increase the correctInstruments count
-                        correctInstruments = correctInstruments + 1;
+                        //Check if the Instrument in this Pot matches the current songInstrument
+                        if (planterInstrument == songInstrument)
+                        {
+                            /*then flip the flag to let us know we have counted this songInstrument.
+                             * This prevents duplicate Instruments from counting more than once*/
+                            counted = true;
+                            //And increase the correctInstruments count
+                            correctInstruments = correctInstruments + 1;
+                        }
                     }
                 }
             }

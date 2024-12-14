@@ -34,12 +34,8 @@ public class PlanterBehavior : MonoBehaviour
                 //Check if there is already an instrument in the Pot...
                 if (instrumentInPot != null) 
                 {
-                    //Turn off the Sprite Renderer for the Instrument that might be in the Pot
-                    instrumentInPot.GetComponent<SpriteRenderer>().enabled = false;
-                    //Set the Instrument in the Pot's volume to 0
-                    instrumentInPot.GetComponent<AudioSource>().volume = 0f;
-                    //Finally, clear out any instrument that might have been in the Pot
-                    instrumentInPot = null;
+                    //Then empty the Pot
+                    emptyPlanter();
                 }
                 //Assign the grabbed Seed to seedInPot
                 seedInPot = gameManager.GetComponent<GameManagerInfo>().grabbedSeed;
@@ -48,17 +44,25 @@ public class PlanterBehavior : MonoBehaviour
             //Else if there is no grabbed Seed
             else
             {
-                //Turn off the Sprite Renderer for the Instrument in the Pot
-                instrumentInPot.GetComponent<SpriteRenderer>().enabled = false;
-                //Set the Instrument in the Pot's volume to 0
-                instrumentInPot.GetComponent<AudioSource>().volume = 0f;
-                //clear out the instrument from the Pot
-                instrumentInPot = null;
-                //And the Seed from the Pot
-                seedInPot = null;
+                //Then clicking should empty the Planter
+                emptyPlanter();
             }
 
         }
+    }
+    /*This fct handles muting the active instrument,
+     * turning off its Sprite Renderer, and then
+     * setting instrumentInPot and seedInPot to null*/
+    public void emptyPlanter()
+    {
+        //Turn off the Sprite Renderer for the Instrument in the Pot
+        instrumentInPot.GetComponent<SpriteRenderer>().enabled = false;
+        //Set the Instrument in the Pot's volume to 0
+        instrumentInPot.GetComponent<AudioSource>().volume = 0f;
+        //clear out the instrument from the Pot
+        instrumentInPot = null;
+        //And the Seed from the Pot
+        seedInPot = null;
     }
     //Start is called once on instantiation
     void Start()
