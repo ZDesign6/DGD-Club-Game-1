@@ -5,6 +5,10 @@ public class GameManagerInfo : MonoBehaviour
 {
     //Keeps track of current frame. App runs at 60fps.
     public int frameCounter = 0;
+    /*A representation of which "Day" we are on.
+     * Controls making the SonicMail at the corresponding Index
+     * in mailList into the activeMail once the timer elapses*/
+    public int gameState = 0;
     //A list for keeping track of all Seeds in the game. Used for referencing, instantiating, etc.
     public List<GameObject> seedList = new List<GameObject>();
     //A list of all Instruments in the game. Used for referencing, instantiating, etc.
@@ -40,8 +44,8 @@ public class GameManagerInfo : MonoBehaviour
             //A sample condition for making a Sonic Mail active, activates every second
             if (frameCounter % 60 == 0)
             {
-                //activate the Mail at Index 0
-                activateMail(0);
+                //activate the Mail at the Index corresponding to the gameState
+                activateMail(gameState);
             }
         }
         

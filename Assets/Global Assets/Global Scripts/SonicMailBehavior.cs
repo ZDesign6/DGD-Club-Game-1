@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class SonicMailBehavior : MonoBehaviour
 {
+    //A ref to the Game Manager
+    GameObject gameManager;
     //This is the Song that this Sonic Mail contains
     public GameObject song;
     /*This is a reference to this SonicMail's Window.
@@ -69,12 +71,19 @@ public class SonicMailBehavior : MonoBehaviour
         if (sendButton.GetComponent<BoxCollider2D>().OverlapPoint(new Vector2(currentMouseWorldPoint.x, currentMouseWorldPoint.y)) == true)
         {
             Debug.Log("CLICKED SEND BUTTON");
+            //remove the activeMail
+            gameManager.GetComponent<GameManagerInfo>().activeMail = null;
+            //set the victoryWindow to inactive
+            victoryWindowSegment.SetActive(false);
+            //Finally, increase the gameState by 1 so we start the next Mail
+            gameManager.GetComponent<GameManagerInfo>().gameState = gameManager.GetComponent<GameManagerInfo>().gameState + 1;
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        //Assign ref to the game manager
+        gameManager = GameObject.Find("Game Manager");
     }
 
     // Update is called once per frame
