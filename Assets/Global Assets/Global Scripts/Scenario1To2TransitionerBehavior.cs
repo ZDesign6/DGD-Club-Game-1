@@ -54,7 +54,22 @@ public class Scenario1To2TransitionerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //every frame, as long as there is an activeMail...
+        if(gameManager.GetComponent<GameManagerInfo>().activeMail != null)
+        {
+            //turn on the Sprite Renderer
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            //turn on the Collider
+            this.gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+        }
+        //Else, if there is NO activeMail...
+        else
+        {
+            //turn off the Sprite Renderer
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            //turn off the Collider
+            this.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        }
     }
     //Handles passing the activeMail in Scenario 1 to the Mail Cubby in Scenario 2
     void passMailToCubby()
