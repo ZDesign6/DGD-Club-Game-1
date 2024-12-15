@@ -27,6 +27,22 @@ public class SeedSelectorCubbyBehavior : MonoBehaviour
             seedsInSelector.Add(mailCubby.GetComponent<MailCubbyBehavior>().mailInCubby.GetComponent<SonicMailBehavior>().seedsInMail[currentIndex]);
         }
     }
+    /*This fct de-activates all Seeds in seedsInSelector,
+     * then empties the list*/
+    public void emptySeeds()
+    {
+        for (int currentIndex = 0; currentIndex < seedsInSelector.Count; currentIndex = currentIndex + 1)
+        {
+            //temp var representing the Seed we're operating on
+            GameObject currentSeed = seedsInSelector[currentIndex];
+            //turn off currentSeed's SpriteRenderer
+            currentSeed.GetComponent<SpriteRenderer>().enabled = false;
+            //turn off currentSeed's Collider
+            currentSeed.GetComponent<PolygonCollider2D>().enabled = false;
+        }
+        //finally, empty the seedsInSelector List
+        seedsInSelector.Clear();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
