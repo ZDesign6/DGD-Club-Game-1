@@ -32,7 +32,7 @@ public class MailCubbyBehavior : MonoBehaviour
                 //Show the Mail at the given pos
                 mailInCubby.GetComponent<Transform>().position = new Vector3(this.gameObject.GetComponent<Transform>().position.x + 5, this.gameObject.GetComponent<Transform>().position.y + 5, this.gameObject.GetComponent<Transform>().position.z - 5);
                 //With scale of 1
-                mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().localScale = new Vector3(10.65f, 6.75f, 1);
+                //mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.GetComponent<Transform>().localScale = new Vector3(10.65f, 6.75f, 1);
                 //If Player clicks on the Mail Cubby, turn the Window component of the Sonic Mail on
                 mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.SetActive(true);
                 //Finally, flip showingMail
