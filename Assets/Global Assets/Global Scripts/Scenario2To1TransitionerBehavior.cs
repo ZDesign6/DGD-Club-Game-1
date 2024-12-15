@@ -5,6 +5,8 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
 {
     //A container to hold the Camera that this Transitioner will switch to when activated
     public Camera targetCamera;
+    //A reference to the Seed Selector, used to allow us to empty it when transitioning
+    GameObject seedSelector;
     //a reference to the Game Manager. Allows us to reference the active Mail.
     GameObject gameManager;
     /*This fct activates on Player Interact. Changes active Camera so we can
@@ -42,6 +44,10 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
                 currentPlanter.GetComponent<PlanterBehavior>().emptyPlanter();
             }
 
+            //EMPTY SEED SELECTOR
+
+            seedSelector.GetComponent<SeedSelectorCubbyBehavior>().emptySeeds();
+
             //TURN ON THE VICTORY WINDOW OF THE ACTIVE MAIL
 
             //set the Victory Window to active
@@ -57,6 +63,7 @@ public class Scenario2To1TransitionerBehavior : MonoBehaviour
     {
         //Assign reference to Game Manager
         gameManager = GameObject.Find("Game Manager");
+        seedSelector = GameObject.Find("Seed Selector Cubby");
     }
 
     // Update is called once per frame
