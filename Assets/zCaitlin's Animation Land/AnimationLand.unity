@@ -1636,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mailInCubby: {fileID: 0}
+  windowAnim: {fileID: 1569356162}
 --- !u!61 &712359621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3859,7 +3860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 532513929341077500, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1207018727813998018, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Name

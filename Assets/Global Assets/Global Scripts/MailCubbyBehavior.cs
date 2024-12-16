@@ -12,6 +12,9 @@ public class MailCubbyBehavior : MonoBehaviour
     //A reference to the SeedSelectorCubby so we can tell it to IntakeSeeds
     GameObject seedCubby;
     /*This fct is called when Player clicks. */
+
+    public Animator windowAnim;
+    
     public void OnClick(InputAction.CallbackContext actionInfo)
     {
         //COLLISION
@@ -37,6 +40,8 @@ public class MailCubbyBehavior : MonoBehaviour
                 mailInCubby.GetComponent<SonicMailBehavior>().windowSegment.SetActive(true);
                 //Finally, flip showingMail
                 showingMail = true;
+                //Play animation
+                windowAnim.Play("WindowAgain");
             }
             //else if a mail IS showing
             else
