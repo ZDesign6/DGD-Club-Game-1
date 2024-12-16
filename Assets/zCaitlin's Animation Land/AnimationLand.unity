@@ -1102,13 +1102,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481640961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -6, y: 1.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.6, y: 0.13, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1109505685}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &481640963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1153,8 +1153,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.78867924, g: 0.3619106, b: 0.3318405, a: 1}
+  m_Sprite: {fileID: -4890640067411608243, guid: 9925c40b103fabf4d99fac1773f3cfbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1201,8 +1201,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.01, y: 1.26}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2472,7 +2472,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.32, y: 0.9214, z: 0}
-  m_LocalScale: {x: 2.1879, y: 2.1879, z: 2.1879}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.2695274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 866627971}
@@ -2521,7 +2521,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 5793395217747032125, guid: f5be2ed01a42b5c4d8f4b5979421bee4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3506,15 +3506,15 @@ MonoBehaviour:
   - 6
   - 8
   seedImg:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8239796693743801463, guid: fb00d34dff835ad4985ce7e683f3f330, type: 3}
+  - {fileID: -8737216172514884747, guid: b21f661c60f2f304e8a5e86f8c03f29f, type: 3}
+  - {fileID: 5793395217747032125, guid: f5be2ed01a42b5c4d8f4b5979421bee4, type: 3}
+  - {fileID: 7608851018345402556, guid: 3fb8a7d6d75266e4ebfe20bde73a5fa9, type: 3}
   seedImg2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -2422362061050849149, guid: 3a9b5a82a6e8006488315202c40c6ac7, type: 3}
+  - {fileID: 3517339796878933640, guid: a045fb6ffd44df14a8b957d168e8463e, type: 3}
+  - {fileID: -5067945876251356680, guid: 30febd0cf68230e46ac68051068a2100, type: 3}
+  - {fileID: 3250313969612066629, guid: 999c50e1a6fe67d4db50a56eeb0400f9, type: 3}
   pgNum: 0
   desc1: {fileID: 410689130}
   desc2: {fileID: 1079530638}
@@ -3858,10 +3858,18 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
       value: -0.016041636
       objectReference: {fileID: 0}
+    - target: {fileID: 424377710955241305, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8737216172514884747, guid: b21f661c60f2f304e8a5e86f8c03f29f, type: 3}
     - target: {fileID: 532513929341077500, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 541188085310564174, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5067945876251356680, guid: 30febd0cf68230e46ac68051068a2100, type: 3}
     - target: {fileID: 1207018727813998018, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Name
       value: Tichaka Instrument
@@ -3886,6 +3894,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ef988acf882a0c949bc554c907544095, type: 3}
+    - target: {fileID: 1421539574354437646, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Name
+      value: Bonatone Seed
+      objectReference: {fileID: 0}
     - target: {fileID: 1509362166725442719, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4052,6 +4064,22 @@ PrefabInstance:
       propertyPath: 'instrumentsInSong.Array.data[3]'
       value: 
       objectReference: {fileID: 1839262520}
+    - target: {fileID: 3695819218918205100, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3517339796878933640, guid: a045fb6ffd44df14a8b957d168e8463e, type: 3}
+    - target: {fileID: 3797730426577390391, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Name
+      value: Bonatone Instrument
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825470339579889157, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5163490374145634016, guid: bfb8ef3a77783c440a1b6c45664cde38, type: 3}
+    - target: {fileID: 3887091206056196441, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3250313969612066629, guid: 999c50e1a6fe67d4db50a56eeb0400f9, type: 3}
     - target: {fileID: 3893184739066151364, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Resource
       value: 
@@ -4068,6 +4096,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 4338917656315477595, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8239796693743801463, guid: fb00d34dff835ad4985ce7e683f3f330, type: 3}
     - target: {fileID: 4364681046287249705, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5758172
@@ -4224,6 +4256,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5114981997363068272, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7608851018345402556, guid: 3fb8a7d6d75266e4ebfe20bde73a5fa9, type: 3}
     - target: {fileID: 5138181615042888321, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Name
       value: Buzzard Instrument
@@ -4256,6 +4292,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.2663
       objectReference: {fileID: 0}
+    - target: {fileID: 5170625446407514245, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2422362061050849149, guid: 3a9b5a82a6e8006488315202c40c6ac7, type: 3}
     - target: {fileID: 5268445804501022593, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9487146
@@ -4436,6 +4476,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 54ca968342fceea4186449ae14de9a42, type: 3}
+    - target: {fileID: 8515436047132210598, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5793395217747032125, guid: f5be2ed01a42b5c4d8f4b5979421bee4, type: 3}
     - target: {fileID: 8671990710470348028, guid: 3c7c2cd23b25d9b4fbb73eef7f2bb41f, type: 3}
       propertyPath: m_Resource
       value: 
@@ -4991,7 +5035,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: 0.9214, z: 0}
-  m_LocalScale: {x: 2.1879, y: 2.1879, z: 2.1879}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 2.1879}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 866627971}
@@ -5319,13 +5363,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069079787}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.84, y: 1.4300001, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.61, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1109505685}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2069079789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5370,8 +5414,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.78867924, g: 0.3619106, b: 0.3318405, a: 1}
+  m_Sprite: {fileID: -4890640067411608243, guid: 9925c40b103fabf4d99fac1773f3cfbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5418,8 +5462,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.01, y: 1.26}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
